@@ -25,19 +25,22 @@ public class PedidosService {
     };
 
     // obtener todos los pedidos por id
+    @SuppressWarnings("null")
     public Pedidos getPedidosById(Integer id) {
         return pedidosRepository.findById(id).orElse(null);
     }
 
     // Crear un pedido
+    @SuppressWarnings("null")
     public Pedidos savePedidos(Pedidos pedidos) {
         return pedidosRepository.save(pedidos);
     }
 
     // Actualizar un pedido
-    public Pedidos updatePedidosById(Integer Id , Pedidos pedidos){
-        if(pedidosRepository.existsById(Id)){
-            pedidos.setId(Id);
+    @SuppressWarnings("null")
+    public Pedidos updatePedidosById(Integer id , Pedidos pedidos){
+        if(pedidosRepository.existsById(id)){
+            pedidos.setId(id);
             return pedidosRepository.save(pedidos);
         }else{
             return null;
@@ -45,6 +48,7 @@ public class PedidosService {
     }
 
     // borrar un pedido
+    @SuppressWarnings("null")
     public void deletePedidos(Integer id) {
         pedidosRepository.deleteById(id);
     }

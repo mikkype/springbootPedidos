@@ -45,9 +45,9 @@ public class PedidosController {
     }
 
 
-    @PutMapping("pedidos/update/{id}")
+    @PutMapping("pedidos/{id}")
     public Pedidos updatePedidosbyId(@PathVariable Integer id, @RequestBody Pedidos pedidos) {
-        return pedidosService.updatePedidosById(id , pedidos);
+        return pedidosService.updatePedidosById(id, pedidos);
     }
 
     @DeleteMapping("/pedidos/{id}")

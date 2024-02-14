@@ -1,7 +1,8 @@
 package com.miguel.apirest.entity;
 
+import java.math.BigDecimal;
 import java.sql.Date;
-import java.text.DecimalFormat;
+
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -38,7 +39,7 @@ public class Pedidos {
     private Date fechaPedido;
 
     @Column(name = "total")
-    private DecimalFormat total;
+    private BigDecimal total;
 
     @Column(name = "estado")
     private String estado;
