@@ -43,7 +43,4 @@ public class Pedidos {
 
     @Column(name = "estado")
     private String estado;
-
-
-    
 }
